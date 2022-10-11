@@ -119,7 +119,7 @@ defineEmits(["submit", "update:name", "update:email", "update:suggestion"]);
     <div class="mt-6 flex flex-col items-center justify-center">
       <div class="flex flex-col justify-center items-center space-y-2 mt-8">
         <span class="font-bold dark:text-gray-200">Organized By:</span>
-        <img src="../../assets/img/logo.svg" class="w-52 -ml-4" alt="Logo" />
+        <img src="../../assets/img/logo.png" class="w-52 -ml-4" alt="Logo" />
       </div>
     </div>
   </form>
