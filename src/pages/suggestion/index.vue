@@ -9,7 +9,6 @@ const { loading, error, success } = storeToRefs(suggestion);
 const form = reactive({
   name: null,
   email: null,
-  address: null,
   suggestion: null,
   errors: null,
 });
@@ -20,10 +19,10 @@ const form = reactive({
     <div v-show="success" class="text-center mb-10">{{ success }}</div>
 
     <v-suggestion-form
+      :loading="loading"
       :errors="form.errors"
       v-model:name="form.name"
       v-model:email="form.email"
-      v-model:address="form.address"
       v-model:suggestion="form.suggestion"
       @submit="async () => await suggestion.send(form)"
     />

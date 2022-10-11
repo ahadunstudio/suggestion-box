@@ -10,7 +10,7 @@ const routes = [
       {
         path: "suggestions",
         component: () => import("~/pages/suggestion/index.vue"),
-        meta: { title: "Kotak Saran" },
+        meta: { title: "Raker Korporat" },
       },
     ],
   },

@@ -16,8 +16,10 @@ router.beforeEach((toRoute, fromRoute, next) => {
   let routerTitle =
     toRoute.meta && toRoute.meta.title ? toRoute.meta.title : "Beranda";
 
-  window.document.title = import.meta.env.VITE_APP_NAME + " | " + routerTitle;
+  window.document.title = routerTitle + " | " + import.meta.env.VITE_APP_NAME;
 
+  // when u want to make with auth,
+  // just add `{meta: {auth: true}}` for validate token
   if (toRoute.matched.some((record) => record.meta.auth)) {
     // this route requires auth, check if logged in
     // if not, redirect to login page.
@@ -33,7 +35,7 @@ router.beforeEach((toRoute, fromRoute, next) => {
     // if not, redirect to login page.
     if (isLoggedIn()) {
       next({
-        path: "/admin/blogs",
+        path: "/admin/dashboards",
       });
     } else {
       next();

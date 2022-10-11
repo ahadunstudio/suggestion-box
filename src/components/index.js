@@ -1,5 +1,6 @@
 import ImgBlur from "~/components/img.vue";
 import Alert from "~/components/alert.vue";
+import Modal from "~/components/modal.vue";
 import Loading from "~/components/loading.vue";
 import Container from "~/components/container.vue";
 import VueMarkdown from "vue-markdown-render";
@@ -10,6 +11,7 @@ export default {
     // common
     app.component("v-img", ImgBlur);
     app.component("v-alert", Alert);
+    app.component("v-modal", Modal);
     app.component("v-loading", Loading);
     app.component("v-container", Container);
     app.component("vue-markdown", VueMarkdown);
