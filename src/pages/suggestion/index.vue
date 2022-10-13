@@ -1,9 +1,11 @@
 <script setup>
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 import config from "./config.json";
 import { storeToRefs } from "pinia";
 import { loadFull } from "tsparticles";
 import { useSuggestion } from "~/stores/suggestion";
+
+const modal = ref();
 
 const suggestion = useSuggestion();
 const { loading, error, success } = storeToRefs(suggestion);
@@ -14,17 +16,22 @@ const form = reactive({
   suggestion: null,
   errors: null,
 });
+
+const onSubmit = async () => {
+  await suggestion.send(form);
+  modal.value.openModal();
+};
 </script>
 <template>
   <div>
     <div class="container max-w-xl mx-auto">
       <v-suggestion-form
+        @submit="onSubmit"
         :loading="loading"
         :errors="form.errors"
         v-model:name="form.name"
         v-model:email="form.email"
         v-model:suggestion="form.suggestion"
-        @submit="async () => await suggestion.send(form)"
       />
     </div>
 
@@ -34,7 +41,7 @@ const form = reactive({
       :particlesInit="async (engine) => loadFull(engine)"
     />
 
-    <v-modal :isOpen="success ? true : false" />
+    <v-modal ref="modal" />
   </div>
 </template>
 <style lang="css" scoped>

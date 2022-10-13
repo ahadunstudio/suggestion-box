@@ -1,9 +1,14 @@
 <script setup>
-const props = defineProps({
-  isOpen: {
-    type: Boolean,
-    default: false,
-  },
+import { ref } from "vue";
+
+const isOpen = ref(false);
+
+const openModal = () => (isOpen.value = true);
+const closeModal = () => (isOpen.value = false);
+
+defineExpose({
+  openModal,
+  closeModal,
 });
 </script>
 <template>
@@ -12,7 +17,7 @@ const props = defineProps({
     aria-labelledby="modal-title"
     role="dialog"
     aria-modal="true"
-    v-show="props.isOpen"
+    v-show="isOpen"
   >
     <div class="fixed inset-0 bg-gray-800/50 backdrop-blur-sm"></div>
 
@@ -50,7 +55,7 @@ const props = defineProps({
           </div>
           <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
             <button
-              @click.prevent="isOpen = false"
+              @click.prevent="closeModal"
               type="button"
               class="
                 inline-flex

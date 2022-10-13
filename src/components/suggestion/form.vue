@@ -99,7 +99,7 @@ defineEmits(["submit", "update:name", "update:email", "update:suggestion"]);
         <v-loading :state="true" class="mr-1" v-else />
 
         <span v-if="loading">Loading..</span>
-        <span v-else>Kirim Masukan</span>
+        <span v-else>Kirim Harapan</span>
       </button>
     </div>
 
