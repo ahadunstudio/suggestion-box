@@ -25,8 +25,6 @@ import { SunIcon, MoonIcon, ArchiveIcon } from "@heroicons/vue/outline";
   </header>
 
   <div class="p-6 pt-[110px] min-h-screen dark:bg-gray-900">
-    <v-modal />
-
     <router-view />
   </div>
 </template>

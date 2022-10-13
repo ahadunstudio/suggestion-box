@@ -29,16 +29,12 @@ defineEmits(["submit", "update:name", "update:email", "update:suggestion"]);
 <template>
   <form class="flex flex-col space-y-4">
     <div class="flex flex-col">
-      <label class="dark:text-gray-300" for="name">Nama</label>
+      <label class="text-gray-100" for="name">Nama</label>
       <input
         type="text"
         id="name"
         :value="name"
-        class="
-          rounded-md
-          dark:bg-gray-800 dark:text-gray-300
-          focus:ring-[#1d68a6]
-        "
+        class="rounded-md focus:ring-[#1d68a6]"
         :class="{
           'border-red-500': errors?.name,
         }"
@@ -49,15 +45,11 @@ defineEmits(["submit", "update:name", "update:email", "update:suggestion"]);
       </span>
     </div>
     <div class="flex flex-col">
-      <label class="dark:text-gray-300" for="email">Email</label>
+      <label class="text-gray-100" for="email">Email</label>
       <input
         id="email"
         type="email"
-        class="
-          rounded-md
-          dark:bg-gray-800 dark:text-gray-300
-          focus:ring-[#1d68a6]
-        "
+        class="rounded-md focus:ring-[#1d68a6]"
         :value="email"
         :class="{
           'border-red-500': errors?.email,
@@ -69,15 +61,10 @@ defineEmits(["submit", "update:name", "update:email", "update:suggestion"]);
       </span>
     </div>
     <div class="flex flex-col">
-      <label class="dark:text-gray-300" for="address">Masukan</label>
+      <label class="text-gray-100"> Wishers / Harapan RKAP 2023 </label>
       <textarea
         id="suggestion"
-        class="
-          rounded-md
-          dark:bg-gray-800 dark:text-gray-300
-          focus:ring-[#1d68a6]
-          h-24
-        "
+        class="rounded-md focus:ring-[#1d68a6] h-24"
         :value="suggestion"
         :class="{
           'border-red-500': errors?.suggestion,
@@ -118,7 +105,7 @@ defineEmits(["submit", "update:name", "update:email", "update:suggestion"]);
 
     <div class="mt-6 flex flex-col items-center justify-center">
       <div class="flex flex-col justify-center items-center space-y-2 mt-8">
-        <span class="font-bold dark:text-gray-200">Organized By:</span>
+        <span class="font-bold text-gray-200">Organized By:</span>
         <img src="../../assets/img/logo.png" class="w-52 -ml-4" alt="Logo" />
       </div>
     </div>

@@ -10,9 +10,12 @@ import RegisterGlobalComponent from "~/components/index";
 
 import utils from "./utils";
 
+import Particles from "vue3-particles";
+
 const app = createApp(App);
 app.use(createPinia());
 app.use(RegisterGlobalComponent);
 app.use(router);
 app.use(utils);
+app.use(Particles);
 app.mount("#app");

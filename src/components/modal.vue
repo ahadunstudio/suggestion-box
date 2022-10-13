@@ -1,7 +1,14 @@
 <script setup>
 import { ref } from "vue";
 
-const show = ref(true);
+const props = defineProps({
+  isOpen: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const show = ref(props.isOpen);
 </script>
 <template>
   <div
