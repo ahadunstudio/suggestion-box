@@ -1,14 +1,10 @@
 <script setup>
-import { ref } from "vue";
-
 const props = defineProps({
   isOpen: {
     type: Boolean,
     default: false,
   },
 });
-
-const show = ref(props.isOpen);
 </script>
 <template>
   <div
@@ -16,7 +12,7 @@ const show = ref(props.isOpen);
     aria-labelledby="modal-title"
     role="dialog"
     aria-modal="true"
-    v-show="show"
+    v-show="props.isOpen"
   >
     <div class="fixed inset-0 bg-gray-800/50 backdrop-blur-sm"></div>
 
@@ -54,7 +50,7 @@ const show = ref(props.isOpen);
           </div>
           <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
             <button
-              @click.prevent="show = false"
+              @click.prevent="isOpen = false"
               type="button"
               class="
                 inline-flex
