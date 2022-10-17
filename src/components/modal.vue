@@ -45,10 +45,10 @@ defineExpose({
               </h1>
               <div class="mt-3">
                 <p class="text-sm text-gray-500">
-                  Untuk para audiens yang cantik dan tampan, silahkan kirim
-                  masukan yang indah kalian ke form pengisian yang telah kami
-                  sediakan, kami akan sangat senang jika masukan itu jujur dan
-                  penuh cinta haha
+                  Untuk para audiens yang cantik dan tampan, silahkan sampaikan
+                  pesan indah kalian ke form yang telah disediakan. Jujurly kami
+                  akan sangat senang jika masukan itu apa adanya, seperti kamu
+                  yang menerima aku apa adanya.
                 </p>
               </div>
             </div>
