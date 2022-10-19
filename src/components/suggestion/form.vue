@@ -14,7 +14,15 @@ defineProps({
     type: [String, null],
     required: true,
   },
-  email: {
+  npk: {
+    type: [String, null],
+    required: true,
+  },
+  unit: {
+    type: [String, null],
+    required: true,
+  },
+  phoneNumber: {
     type: [String, null],
     required: true,
   },
@@ -45,21 +53,55 @@ defineEmits(["submit", "update:name", "update:email", "update:suggestion"]);
       </span>
     </div>
     <div class="flex flex-col">
-      <label class="text-gray-100" for="email">Email</label>
+      <label class="text-gray-100" for="npk">Npk</label>
       <input
-        id="email"
-        type="email"
+        id="npk"
+        type="number"
         class="rounded-md focus:ring-[#1d68a6]"
-        :value="email"
+        :value="npk"
         :class="{
-          'border-red-500': errors?.email,
+          'border-red-500': errors?.npk,
         }"
-        @input="$emit('update:email', $event.target.value)"
+        @input="$emit('update:npk', $event.target.value)"
       />
-      <span class="mt-1 text-red-500" v-if="errors?.email">
-        {{ errors.email[0] }}
+      <span class="mt-1 text-red-500" v-if="errors?.npk">
+        {{ errors.npk[0] }}
       </span>
     </div>
+
+    <div class="flex flex-col">
+      <label class="text-gray-100" for="npk">Unit</label>
+      <input
+        id="unit"
+        type="text"
+        class="rounded-md focus:ring-[#1d68a6]"
+        :value="unit"
+        :class="{
+          'border-red-500': errors?.unit,
+        }"
+        @input="$emit('update:unit', $event.target.value)"
+      />
+      <span class="mt-1 text-red-500" v-if="errors?.unit">
+        {{ errors.unit[0] }}
+      </span>
+    </div>
+
+    <div class="flex flex-col">
+      <label class="text-gray-100">Nomor Hp</label>
+      <input
+        type="number"
+        class="rounded-md focus:ring-[#1d68a6]"
+        :value="phoneNumber"
+        :class="{
+          'border-red-500': errors?.phoneNumber,
+        }"
+        @input="$emit('update:phoneNumber', $event.target.value)"
+      />
+      <span class="mt-1 text-red-500" v-if="errors?.phoneNumber">
+        {{ errors.phoneNumber[0] }}
+      </span>
+    </div>
+
     <div class="flex flex-col">
       <label class="text-gray-100"> Wishers / Harapan RKAP 2023 </label>
       <textarea
