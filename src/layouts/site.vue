@@ -19,7 +19,7 @@ import { SunIcon, MoonIcon, ArchiveIcon } from "@heroicons/vue/outline";
   >
     <div class="container mx-auto p-4">
       <div class="flex items-center justify-center px-4">
-        <img src="../assets/img/pk.png" class="w-64 h-full" alt="Logo" />
+        <img src="../assets/img/logo-new.png" class="w-24 h-full" alt="Logo" />
       </div>
     </div>
   </header>
