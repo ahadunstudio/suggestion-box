@@ -37,23 +37,40 @@ defineExpose({
           "
         >
           <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            <img src="../assets/img/landing.jpg" alt="Image" />
+            <div class="flex flex-row items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-24 h-24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+                />
+              </svg>
+            </div>
 
             <div class="mt-3 text-center">
               <h1 class="text-xl font-bold leading-6 text-gray-900">
-                Selamat Datang di Acara Raker Korporat 2022
+                Berhasil melakukan registrasi peserta
               </h1>
-              <div class="mt-3">
-                <p class="text-sm text-gray-500">
-                  Untuk para audiens yang cantik dan tampan, silahkan sampaikan
-                  pesan indah kalian ke form yang telah disediakan. Jujurly kami
-                  akan sangat senang jika masukan itu apa adanya, seperti kamu
-                  yang menerima aku apa adanya.
-                </p>
-              </div>
             </div>
           </div>
-          <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+          <div
+            class="
+              bg-gray-50
+              px-4
+              py-3
+              min-full
+              flex
+              justify-center
+              items-center
+            "
+          >
             <button
               @click.prevent="closeModal"
               type="button"
@@ -64,7 +81,7 @@ defineExpose({
                 rounded-md
                 border border-transparent
                 bg-red-600
-                px-4
+                px-[50px]
                 py-2
                 text-base
                 font-medium
@@ -78,7 +95,7 @@ defineExpose({
                 sm:ml-3 sm:w-auto sm:text-sm
               "
             >
-              Tutup
+              Ok
             </button>
           </div>
         </div>
