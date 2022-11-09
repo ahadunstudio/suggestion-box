@@ -19,12 +19,12 @@ import { SunIcon, MoonIcon, ArchiveIcon } from "@heroicons/vue/outline";
   >
     <div class="container mx-auto p-4">
       <div class="flex items-center justify-center px-4">
-        <img src="../assets/img/logo-new.png" class="w-24 h-full" alt="Logo" />
+        <img src="../assets/img/xxx.png" class="w-24 h-full" alt="Logo" />
       </div>
     </div>
   </header>
 
-  <div class="p-6 pt-[110px] min-h-screen dark:bg-gray-900">
+  <div class="p-6 pt-[210px] min-h-screen dark:bg-gray-900">
     <router-view />
   </div>
 </template>
